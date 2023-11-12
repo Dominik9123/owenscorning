@@ -420,7 +420,7 @@ body {
 
 }
 
-@media (min-width : 820px) {
+@media (min-width : 600px) {
         .rozwijana {
             display: none;
         }
