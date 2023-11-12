@@ -329,13 +329,13 @@ body {
 }
 
 
-@media (max-width : 600px) {
+@media (max-width : 500px) {
 
     .menu {
         width: 100%;
         position: fixed;
         top: 0;
-        left: -340px;
+        left: -100px;
         padding: 0 50px;
         background-color: none;
         display: flex;
