@@ -349,9 +349,7 @@ body {
     }
 
 
-    .menu .dropdown {
-        display: none;
-    }
+  
 
     .menu.active .dropdown {
         display: block;
