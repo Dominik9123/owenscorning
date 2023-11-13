@@ -2,117 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owens Corning U.S</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="hero">
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="images/video.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="oferta.html">Oferta</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="Galeria.html">Galeria</a></li>
+            <li><a href="onas.html">O Nas</a></li>
+        </ul>
+        <ul>
+            <img src="logo.png" class="logo">
+            <li class="hideOnMobile"><a href="oferta.html">Oferta</a></li>
+            <li class="hideOnMobile"><a href="kontakt.html">Kontakt</a></li>
+            <li class="hideOnMobile"><a href="Galeria.html">Galeria</a></li>
+            <li class="hideOnMobile"><a href="onas.html">O Nas</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
 
-        <video autoplay loop muted plays-inline class="back-video">
-            <source src="images/video.mp4" type="video/mp4">
-        </video>
 
 
-        <header>
-            <nav class="menu">
-                <img src="logo.png" class="logo">
-                <div class="dropdown">
-                <a href="#" class="rozwijana">Menu</a>
-                    <ul>
-                    <li><a href="oferta.html">Oferta</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="Galeria.html">Galeria</a></li>
-                    <li><a href="onas.html">O Nas</a></li>
-                    <button class="btnlogin-popup">Zaloguj Się</button>
-                </ul>
-            </div>
-            </nav>
-        </header>
-            
-        <div class="wrapper">
-            <span class="icon-close">
-                <ion-icon name="close-outline"></ion-icon>
-            </span>
-
-           
-
-        <div class="form-box login">
-            <h2>Zaloguj</h2>
-            <form action="login.php" method="post">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-unread"></ion-icon></span>
-                    <input type="email" required>
-                    <label>E-mail</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Hasło</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Zapamietaj mnie</label>
-                    <a href="#">Zapomniales hasla?</a>
-                </div>
-                <button type="submit" class="btn">Zaloguj</button>
-                <div class="login-zarejestruj">
-                    <p>Nie masz konta?<a href="#" class="register-link">Zarejestruj</a></p>
-                </div>
-            </form>
-        </div>
-        <div class="form-box register">
-            <h2>Zarejestruj</h2>
-            <form action="register.php" method="post">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Nazwa Uzytkownika</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-unread"></ion-icon></span>
-                    <input type="email" required>
-                    <label>E-mail</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Hasło</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Akceptuje Regulamin & Zasady</label>
-                
-                </div>
-                <button type="submit" class="btn">Zarejestruj</button>
-                <div class="login-zarejestruj">
-                    <p>Posiadasz juz konto?<a href="#" class="login-link">Zaloguj</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-        
-        
-        
-        
-        
-        <script src="script.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-        
-            <!-- <div class="content">
-                <h1>Dowiedz się Więcej</h1>
-            </div> -->
-            
-  <script>
-    const menuButton = document.querySelector('.rozwijana');
-const menu = document.querySelector('.menu');
-
-menuButton.addEventListener('click', () => {
-    menu.classList.toggle('active'); 
-});
-
-  </script>
-
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+    
 </body>
 </html>
