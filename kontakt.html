@@ -16,15 +16,26 @@
     </div> -->
     
     <nav>
-        <img src="logo.png" class="logo">
-        <ul>
-            <li><a href="index.html">Strona Główna</a></li>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Strona glowna</a></li>
             <li><a href="oferta.html">Oferta</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="Galeria.html">Galeria</a></li>
             <li><a href="onas.html">O Nas</a></li>
-        </ul>   
+        </ul>
+        <ul>
+            <img src="logo.png" class="logo">
+            <li class="hideOnMobile"><a href="index.html">Strona Glowna</a></li>
+            <li class="hideOnMobile"><a href="oferta.html">Oferta</a></li>
+            <li class="hideOnMobile"><a href="Galeria.html">Galeria</a></li>
+            <li class="hideOnMobile"><a href="onas.html">O Nas</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
     </nav>
+
+
+
+
 
  
 
@@ -116,7 +127,16 @@
             </div>
         </div>
 
-        
+        <script>
+            function showSidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
 
     </section>
 </body>
