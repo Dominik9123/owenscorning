@@ -83,9 +83,7 @@ nav li:first-child {
     height: 100vh;
 }
 
-.back-video {
-   
-}
+
 
 @media(max-width: 800px) {
     .hideOnMobile{
@@ -101,4 +99,3 @@ nav li:first-child {
         width: 100%;
     }
 }
-
